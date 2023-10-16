@@ -370,7 +370,7 @@
         </ul>
       </section>
     </main>
-    <footer >
+    <footer>
       <div class="container-adress"> 
       <div class="footer-child-container">
         <h4><span class="highlight">Web</span>Studio</h4>
@@ -419,14 +419,76 @@
          
          </ul>
         </div> 
+      
+          <form class="footer-form">
+            
+              <label class="form-title" for="email">Subscribe to the newsletter </label>
+                <div class="form-email">
+                  <input class="email"type="email" name="email"  id="email" placeholder="E-mail"/>
+             
+              <div class="form-subscribe-container">
+                <button class="form-subscribe" type="submit">Subscribe</button>
+              <svg class="icon-send">
+                <use href="./images/icons.svg.svg#icon-icon-send-1" >
+                </use>
+              </svg>
+              </div>
+                </div>
+          </form>
+        
       </div>
-  
+      
     </footer>
     <!--Modal-->
 
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
-        <button class="close-btn" data-modal-close>&times;</button>
+        <svg class="close-btn" data-modal-close>
+          <use href="./images/icons.svg.svg#icon-Vector"></use>
+        </svg>
+        <p class="text-indication">
+          <strong>Leave your information and we'll call you back</strong>
+        </p>
+        <form action="" method="get" autocomplete="off" class="container-form">
+           <div class="form-section">
+            <labe class="form-label" for="name">Name</labe>
+            <div class="input-container">
+              <input class="textfield" type="text" name="name" id="name" />
+            <svg>
+              <use href="./images/icons.svg.svg#icon-person-black-18dp-1"></use>
+            </svg>
+            </div>
+           </div>
+
+           <div class="form-section">
+            <label class="form-label" for="telephone">Telephone</label>
+            <div class="input-container"> 
+              <input class="textfield" type="tel" name="telephone" id="telephone" />
+              <svg>
+                <use href="./images/icons.svg.svg#icon-phone-black-18dp-1"></use>
+              </svg>
+            </div>
+           </div>
+
+           <div class="form-section">
+            <labe class="form-label" for="email">E-mail</labe>
+            <div class="input-container">
+              <input class="textfield" type="email" name="email" id="email" />
+            <svg>
+              <use href="./images/icons.svg.svg#icon-email-black-18dp-1"></use>
+            </svg>
+            </div>
+           </div>
+
+           <div class="form-section">
+            <labe class="form-label" for="comments">Comments</labe>
+            <div class="input-container">
+              <textarea class="textarea-form" placeholder="Enter the text" rows="5"  type="text" name="comments" id="comments"></textarea>
+            </div>
+           </div>
+            
+        </form>
+
       </div>
     </div>
     <script src="./js/modal.js"></script>
