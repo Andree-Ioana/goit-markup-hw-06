@@ -894,7 +894,7 @@ h2 {
   background-color: #fff;
   padding: 20px;
   width: 520px;
-  height: 520px;
+  height: 580px;
   border-radius: 4px;
   position: relative;
 }
@@ -905,9 +905,9 @@ h2 {
 
 .close-btn {
   box-sizing: content-box;
-  width: 18px;
-  height: 18px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 6px;
   cursor: pointer;
@@ -915,7 +915,10 @@ h2 {
   top: 14px;
   right: 14px;
 }
-
+.close-btn:hover{
+  fill: #2196F3;
+  transition: fill var(--transition);
+}
 .text-indication {
   font-family: var(--heading-font-family);
   font-size: 20px;
@@ -923,7 +926,7 @@ h2 {
   letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .container-form {
   display: flex;
@@ -990,4 +993,87 @@ textarea:focus {
   font-weight: 400;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.terms-and-conditions-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.terms-and-conditions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.terms-and-conditions-check {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: calc(50% - 7.5px);
+  left: 13px;
+}
+
+.terms-and-conditions-label span {
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  padding-left: 35px;
+}
+
+.terms-and-conditions-label span a {
+  color: #2196f3;
+}
+
+.terms-and-conditions-label svg {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: calc(50% - 7.5px);
+  left: 13px;
+}
+
+.terms-and-conditions-check:not(:checked) {
+  visibility: hidden;
+}
+
+.terms-and-conditions-check:checked + label > svg {
+  display: none;
+}
+
+.send-button {
+  width: 200px;
+  height: 50px;
+  top: 712px;
+  left: 700px;
+  border-radius: 4px solid #2196f3;
+  background: #2196f3;
+
+  color: #ffffff;
+  margin-top: 30px;
+  margin-left: 120px;
+   cursor: pointer;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  
+}
+
+.send-button:hover{
+  background-color: #188ce8;
+  box-shadow: 0px 2px 1px 0px #00000033,
+   0px 1px 1px 0px #00000024,
+   0px 1px 3px 0px #0000001F;
+
+  transition: background-color var(--transition);
 }
