@@ -13,10 +13,20 @@
 }
 
 .contact-container {
-  display: flex;
-  justify-content: center;
-  padding-left: 400px;
-  gap: 40px;
+  display: none;
+}
+.menu-button {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  cursor: pointer;
+}
+.menu-button svg {
+  width: 40px;
+  height: 40px;
+}
+.menu-button svg:hover{
+  fill: #2196F3;
 }
 .mail {
   width: 16px;
@@ -118,15 +128,17 @@ span.accent {
   font-size: 26px;
 }
 
-.nav-title {
+.nav-title{
   display: flex;
   font-family: var(--series-font-family);
   color: #000000;
   font-weight: 700;
   font-size: 26px;
-  padding-left: 215px;
+  padding-left: 15px;
 }
-
+.navigation {
+  display: none;
+}
 .global-header .main-navigation a:link {
   text-decoration: none;
   font-weight: 500;
@@ -160,15 +172,17 @@ span.accent {
     ),
     url(../images/friends.jpg);
 }
-
-.title {
+.title{
+  display: none;
+}
+.title-st{
   color: #ffffff;
   font-size: 44px;
   font-weight: 900;
   line-height: 60px;
   letter-spacing: 0.06em;
   text-align: center;
-  width: 696px;
+  width: 540px;
   height: 120px;
   top: 94px;
   left: 452px;
@@ -227,6 +241,9 @@ span.accent {
   top: 799px;
   left: 1215px;
 }
+
+
+
 .icon-list {
   border: 1px solid #f5f4fa;
   border-radius: 4px;
@@ -238,14 +255,29 @@ span.accent {
   text-align: center;
   padding: 25px 100px;
 }
-.icon-about-us ul {
+.icon-list h4{
   display: flex;
+  color: #212121;
+  font-size: 14px;
+  line-height: 16.41px;
+  letter-spacing: 0.03em;
+  width: 270px;
+  height: 16px;
+  top: 120px;
+  left: 215px;
+  justify-content: flex-start;
+  margin: 10px;
+}
+.icon-about-us ul {
+  display: none;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 40px;
 }
 .about-us {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   height: 101px;
   gap: 30px;
@@ -259,7 +291,7 @@ span.accent {
   letter-spacing: 0.03em;
   width: 270px;
   height: 75px;
-  top: 94px;
+  top: 4px;
   left: 215px;
   justify-content: center;
   padding-left: 5px;
@@ -282,7 +314,7 @@ ul {
   list-style-type: none;
 }
 .image-gallery {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding-top: 94px;
   padding-bottom: 94px;
@@ -898,10 +930,8 @@ h2 {
   height: 560px;
   border-radius: 4px;
   position: relative;
-  box-shadow: 0px 2px 1px 0px #00000033,
-              0px 1px 1px 0px #00000024,
-              0px 1px 3px 0px #0000001F;
-
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
 }
 
 .is-hidden {
@@ -920,8 +950,8 @@ h2 {
   top: 14px;
   right: 14px;
 }
-.close-btn:hover{
-  fill: #2196F3;
+.close-btn:hover {
+  fill: #2196f3;
   transition: fill var(--transition);
 }
 .text-indication {
@@ -1064,21 +1094,188 @@ textarea:focus {
   color: #ffffff;
   margin-top: 20px;
   margin-left: 120px;
-   cursor: pointer;
+  cursor: pointer;
   font-family: var(--heading-font-family);
   font-size: 16px;
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.06em;
   text-align: center;
+}
+
+.send-button:hover {
+  background-color: #188ce8;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
+
+  transition: background-color var(--transition);
+}
+
+.js-menu-container {
+  display: none;
+}
+
+.js-menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  width: 480px;
+  height: 796px;
+  padding: 20px 20px;
+  z-index: 1;
+}
+
+.js-menu-container .js-close-menu {
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.js-menu-container .js-close-menu svg {
+  width: 20px;
+  height: 20px;
+}
+.js-menu-container .js-close-menu svg:hover{
+  fill: #2196F3;
+}
+.js-menu-container a {
+  text-decoration: none;
+}
+.menu-drawer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+
+  font-family: var(--heading-font-family);
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.active:hover,
+.active:focus{
+  color: #2196f3;
+  transition: color var(--transition);
+}
+.menu-drawer-navigation a {
+  color: #212121;
+}
+.contact-menu-navigation{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 200px;
+  padding-left: 40px;
+
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: left;
+  
+}
+.contact-menu-navigation a{
+  color: #757575;
+}
+
+.contact-menu-navigation a:hover,
+.contact-menu-navigation a:focus{
+  color: #2196F3;
+  transition: color var(--transition);
+}
+.container-social-media{
+  width: 457px;
+  height: 22px;
+  padding-top: 34px;
+  padding-left: 40px;
+
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.container-social-media a{
+  color: #2196F3;
+}
+.dash{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+/* Tableta */
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 90px;
+    gap: 10px;
+  }
+  .menu-button {
+    display: none;
+  }
   
 }
 
-.send-button:hover{
-  background-color: #188ce8;
-  box-shadow: 0px 2px 1px 0px #00000033,
-   0px 1px 1px 0px #00000024,
-   0px 1px 3px 0px #0000001F;
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .navigation {
+    display: flex;
+  }
+  .nav-title {
+    display: flex;
+    font-family: var(--series-font-family);
+    color: #000000;
+    font-weight: 700;
+    font-size: 26px;
+    padding-left: 215px;
+  }
 
-  transition: background-color var(--transition);
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 400px;
+    gap: 40px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+  .title-st{
+    display: none;
+  }
+  .title {
+    display: flex;
+    color: #ffffff;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    width: 669px;
+    height: 120px;
+    top: 94px;
+    left: 452px;
+  }
+  .image-gallery{
+    display: flex;
+  }
+  .icon-about-us ul{
+    display: flex;
+  }
+  .icon-about-us-p{
+   display: none;
+  }
+  
+ 
 }

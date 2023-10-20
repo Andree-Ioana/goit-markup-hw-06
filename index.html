@@ -17,47 +17,98 @@
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
 
-  <body >
+  <body>
+       <div class="js-menu-container">
+        <button class="menu-toggle js-close-menu">
+          <svg>
+            <use href="./images/icons.svg.svg#icon-close_24px" ></use>
+          </svg>
+        </button>
+        <nav class="menu-drawer-navigation">
+       <ul class="menu-drawer-list">
+        <li><a href="./index.html" class="active">Studio</a></li>
+              <li><a href="./portofolio.html" >Portofolio</a></li>
+              <li><a href="#">Contacts</a></li>
+       </ul>
+        </nav>
+
+        <div class="contact-menu-navigation">
+          <a  href="tel:+12127724150">+1 212-772-4150</a>
+          <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </div>
+
+        <div class="container-social-media">
+          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+          <img class="dash" src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
+          <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+          <img class="dash" src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
+          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+          <img class="dash" src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
+          <a href="https://www.linkedin.com/" target="_blank">Linkedin</a>
+
+        </div>
+
+       </div>
+
     <header class="global-header">
+      
       <a href="./index.html/"></a>
       <section class="nav-container">
         <h4 class="nav-title"><span class="accent">Web</span>Studio</h4>
 
-        <nav class="main-navigation">
-          <ul class="list-class">
-            <li><a href="./index.html" class="nav-link current">Studio</a></li>
-            <li><a href="./portofolio.html" class="nav-link">Portofolio</a></li>
-            <li><a href="#" class="nav-link">Contacts</a></li>
-          </ul>
-        </nav>
-
-        <div class="contact-container">
-          <div class="icon-mail">
-            <svg class="mail">
-              <use href="./images/icons.svg.svg#icon-envelope-hover-1" >
-              </use>
-            </svg>
-            <a href="mailto:info@devstudio.com">info@devstudio.com</a>
-          </div>
-          <div class="icon-phone">
-            <svg class="phone">
-              <use href="./images/icons.svg.svg#icon-smartphone-1">
-              </use>
-            </svg>
-            <a class="tel" href="tel:+12127724150">+1 212-772-4150</a>
-          </div>
+        <div class="navigation">
+          <nav class="main-navigation">
+            <ul class="list-class">
+              <li><a href="./index.html" class="nav-link current">Studio</a></li>
+              <li><a href="./portofolio.html" class="nav-link">Portofolio</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
         </div>
+          
+            <div class="contact-container">
+              <div class="icon-mail">
+                <svg class="mail">
+                  <use href="./images/icons.svg.svg#icon-envelope-hover-1" >
+                  </use>
+                </svg>
+                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              
+              </div>
+            
+              <div class="icon-phone">
+                <svg class="phone">
+                  <use href="./images/icons.svg.svg#icon-smartphone-1">
+                  </use>
+                </svg>
+                <a class="tel" href="tel:+12127724150">+1 212-772-4150</a>
+              </div>
+            </div>
+          
+            <div class="menu-button js-open-menu">
+              <svg>
+                <use href="./images/icons.svg.svg#icon-menu_40px-1" ></use>
+              </svg>
+            </div>
+       
       </section>
     </header>
     <main>
-      <section  class="page-section-content">
-        <h1 class="title">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
+      <section >
+        
+        <div  class="page-section-content">
+          <h1 class="title-st ">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
+        <h1 class="title ">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
         <button data-modal-open type="button" class="button-service">
           Request our service
         </button>
+        </div>
       </section>
 
       <section class="information-container">
+  
+
+
         <div class="icon-about-us">
         <ul>
           <li class="icon-list">
@@ -65,6 +116,7 @@
               <use href="./images/icons.svg.svg#icon-antenna-1-1">
               </use>
             </svg>
+            
           </li>
           <li class="icon-list">
             <svg class="clock">
@@ -85,7 +137,7 @@
             </svg>
           </li>
         </ul>
-      </div>
+     
         <ul class="about-us">
           <li>
             <h4>ATTENTION TO DETAILS</h4>
@@ -118,6 +170,7 @@
             </p>
           </li>
         </ul>
+      </div>
       </section>
 
       <section class="image-gallery">
@@ -517,5 +570,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
